@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">GpsAlarm</string>
+    <string name="titleNotification">Gps будильник</string>
+    <string name="textNotification">Gps будильник включен</string>
+    <string name="start_service">Запустить будильник</string>
+    <string name="alarm">Alarm</string>
+    <string name="google_maps_key">AIzaSyDtqMR4Xy4ezoGVsYIGu8C8PkUM9HQ-EzE</string>
+    <string name="description">Место</string>
+    <string name="start_alarm">Запустить будильник</string>
+    <string name="error_fill_field">Не все поля заполнены</string>
+    <string name="ok_alarm">OK</string>
+    <string name="to_the_place">Вы скоро прибудите в</string>
+    <string name="minute">Минуты</string>
+    <string name="speed">Скорость</string>
+    <string name="distance">Расстояние</string>
+    <string name="time_left">Времени осталось</string>
+    <string name="change_location">Изменить локацию</string>
+    <string name="meter_in_seconds"> м/с</string>
+    <string name="meters"> м</string>
+    <string name="minutes"> мин</string>
+</resources>

@@ -1,0 +1,178 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <fragment xmlns:android="http://schemas.android.com/apk/res/android"
+        android:id="@+id/map"
+        android:name="com.google.android.gms.maps.MapFragment"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/rlGeneral" />
+
+    <RelativeLayout
+        android:id="@+id/rlGeneral"
+        android:layout_width="match_parent"
+        android:layout_height="220dp"
+        android:layout_alignParentBottom="true">
+
+        <RelativeLayout
+            android:id="@+id/rlInfoAboutArrive"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            >
+
+            <TextView
+                android:id="@+id/tvSpeed"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="16dp"
+                android:text="@string/speed"
+                android:textSize="20sp"
+                tools:ignore="RtlHardcoded" />
+
+            <TextView
+                android:id="@+id/speed"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="16dp"
+                android:layout_toRightOf="@+id/tvSpeed"
+                android:textSize="20sp"
+                tools:ignore="RtlHardcoded" />
+
+            <TextView
+                android:id="@+id/tvDistance"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:layout_marginLeft="16dp"
+                android:layout_below="@+id/tvSpeed"
+                android:text="@string/distance"
+                android:textSize="20sp"
+                tools:ignore="RtlHardcoded" />
+
+            <TextView
+                android:id="@+id/distance"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="16dp"
+                android:layout_toRightOf="@+id/tvDistance"
+                android:layout_marginTop="16dp"
+                android:layout_below="@+id/speed"
+                android:textSize="20sp"
+                tools:ignore="RtlHardcoded" />
+
+            <TextView
+                android:id="@+id/tvTime"
+                android:layout_width="wrap_content"
+                android:layout_marginLeft="16dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:layout_below="@+id/distance"
+                android:text="@string/time_left"
+                android:textSize="20sp"
+                tools:ignore="RtlHardcoded" />
+
+            <TextView
+                android:id="@+id/time"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="16dp"
+                android:layout_marginTop="16dp"
+                android:layout_toRightOf="@+id/tvTime"
+                android:layout_below="@+id/distance"
+                android:textSize="20sp"
+                tools:ignore="RtlHardcoded" />
+            <Button
+                android:id="@+id/btnChange"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/change_location"
+                android:layout_marginLeft="16dp"
+                android:layout_marginRight="16dp"
+                android:layout_marginBottom="16dp"
+                android:layout_below="@+id/time"/>
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/rlDescription"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true">
+
+            <RelativeLayout
+                android:id="@+id/rlContentPlace"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:id="@+id/tvDescription"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="16dp"
+                    android:layout_marginTop="16dp"
+                    android:text="@string/description"
+                    android:textSize="30sp"
+                    tools:ignore="RtlHardcoded" />
+
+                <EditText
+                    android:id="@+id/etDescription"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="16dp"
+                    android:layout_marginTop="16dp"
+                    android:layout_toRightOf="@+id/tvDescription"
+                    android:inputType="text"
+                    android:maxLength="40"
+                    android:maxLines="1"
+                    tools:ignore="RtlHardcoded" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/rlMinute"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/rlContentPlace"
+                android:layout_marginTop="16dp">
+
+                <TextView
+                    android:id="@+id/tvMinute"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="16dp"
+                    android:layout_marginTop="16dp"
+                    android:text="@string/minute"
+                    android:textSize="30sp"
+                    tools:ignore="RtlHardcoded" />
+
+                <EditText
+                    android:id="@+id/etMinute"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="16dp"
+                    android:layout_marginTop="16dp"
+                    android:layout_toRightOf="@+id/tvMinute"
+                    android:inputType="numberDecimal"
+                    android:maxLength="5"
+                    android:maxLines="1"
+                    tools:ignore="RtlHardcoded" />
+            </RelativeLayout>
+
+            <Button
+                android:id="@+id/btnStartService"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/rlMinute"
+                android:layout_marginBottom="16dp"
+                android:layout_marginLeft="16dp"
+                android:layout_marginRight="16dp"
+                android:layout_marginTop="10dp"
+                android:text="@string/start_alarm" />
+
+        </RelativeLayout>
+    </RelativeLayout>
+
+</RelativeLayout>

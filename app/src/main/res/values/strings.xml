@@ -1,0 +1,21 @@
+<resources>
+    <string name="app_name">GpsAlarm</string>
+    <string name="titleNotification">Gps alarm</string>
+    <string name="textNotification">Gps alarm turned on</string>
+    <string name="start_service">Start service</string>
+    <string name="alarm">Alarm</string>
+    <string name="google_maps_key">AIzaSyDtqMR4Xy4ezoGVsYIGu8C8PkUM9HQ-EzE</string>
+    <string name="description">Place</string>
+    <string name="start_alarm">Start alarm</string>
+    <string name="error_fill_field">Not all field fill</string>
+    <string name="ok_alarm">OK</string>
+    <string name="to_the_place">You will soon arrive at</string>
+    <string name="minute">Minutes</string>
+    <string name="speed">Speed</string>
+    <string name="distance">Distance</string>
+    <string name="time_left">Time left</string>
+    <string name="change_location">Change location</string>
+    <string name="meter_in_seconds"> m/s</string>
+    <string name="meters"> m</string>
+    <string name="minutes"> min</string>
+</resources>

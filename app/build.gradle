@@ -1,0 +1,55 @@
+apply plugin: 'com.android.application'
+
+android {
+    signingConfigs {
+        config {
+            keyAlias 'gpsalarm'
+            keyPassword 'gpsalarm'
+            storeFile file('C:/Users/GunFerzs/AndroidStudioProjects/gpsalarm/app/gpsalarm.jks')
+            storePassword 'gpsalarm'
+        }
+    }
+    compileSdkVersion 25
+    buildToolsVersion "26.0.1"
+    defaultConfig {
+        applicationId "ru.gunferzs.gpsalarm"
+        minSdkVersion 16
+        //noinspection OldTargetApi
+        targetSdkVersion 25
+        versionCode 1
+        versionName "1.0"
+        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+            signingConfig signingConfigs.config
+        }
+    }
+    productFlavors {
+        gpstest {
+            applicationId "ru.gunferzs.gpsalarm"
+        }
+        gpsreal {
+            applicationId "ru.gunferzs.gpsalarm"
+        }
+    }
+}
+
+dependencies {
+    compile fileTree(include: ['*.jar'], dir: 'libs')
+    androidTestCompile('com.android.support.test.espresso:espresso-core:2.2.2', {
+        exclude group: 'com.android.support', module: 'support-annotations'
+    })
+    compile 'com.android.support:appcompat-v7:25.3.1'
+    compile 'com.android.support.constraint:constraint-layout:1.0.2'
+    compile 'com.hannesdorfmann.mosby3:mvp-conductor:3.0.0'
+    compile 'com.jakewharton:butterknife:8.8.1'
+    annotationProcessor 'com.jakewharton:butterknife-compiler:8.8.1'
+    compile 'io.reactivex.rxjava2:rxjava:2.0.1'
+    compile 'io.reactivex.rxjava2:rxandroid:2.0.1'
+    compile 'com.orhanobut:hawk:2.0.1'
+    compile 'com.google.android.gms:play-services-maps:11.0.4'
+    testCompile 'junit:junit:4.12'
+}
